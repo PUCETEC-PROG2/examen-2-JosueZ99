@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %} {{movie}} {% endblock title %}
+
+{% block content %}
+<h2 class="my-3 text-center bg-info">{{movie}}</h2>
+<p><strong>A&ntilde;o de publicaci&oacute;n:</strong> {{movie.year}}</p>
+<p><strong>Director:</strong> {{movie.director}}</p>
+<p><strong>G&eacute;nero:</strong> {{movie.genre}}</p>
+<p><strong>Sinopsis:</strong> {{movie.sinopsis}}</p>
+{% endblock content %}

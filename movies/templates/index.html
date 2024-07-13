@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %} Movie List {% endblock title %} 
+{% load static %}
+
+{% block content %} 
+<p>Bienvenido a tu cat&aacute;logo de pelis preferido!</p>
+<p>A continuaci&oacute;n escoge la peli que desees para visualizar la informaci&oacute;n:</p>
+<ul class="list-group">
+    <div class="container">
+        <div class="row allign-items-center justify-content-center">
+            {% for movie in movies %}
+            <li class="card mx-4 my-2 text-center" style="width: 200px;">
+              <div class="card-header bg-success"></div>
+                <div class="card-body">
+                    <h5 class="card-title"><a href="movies/{{movie.id}}">{{movie}}</a></h5>
+                    <p class="card-text">{{movie.year}}</p>
+                </div>
+            </li>
+            {% endfor %}
+        </div>
+    </div>
+    
+</ul>
+{% endblock content %}
